@@ -1,105 +1,60 @@
-/* === Основные стили === */
 body {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  background: #f2f5f9;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #222;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
-
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 16px;
+:root {
+  --button-color: #4da6ff;
 }
-
-/* === Заголовки === */
-h1, h2 {
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+body.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+}
+.header {
   text-align: center;
-  color: #0088cc;
+  padding: 10px;
 }
-
-/* === Карточки товаров === */
-.product-card, .order-card, .archive-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  padding: 16px;
-  margin-bottom: 12px;
-  transition: 0.2s;
+.logo {
+  max-width: 200px;
 }
-
-.product-card:hover, .order-card:hover, .archive-card:hover {
-  transform: scale(1.02);
-}
-
-/* === Счётчики === */
-.counter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-
-.counter button {
-  background: #0088cc;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.counter button:hover {
-  background: #0077b3;
-}
-
-.counter span {
-  font-size: 18px;
-  font-weight: bold;
-  min-width: 30px;
-  text-align: center;
-}
-
-/* === Кнопки === */
-button {
-  width: 100%;
-  background: #0088cc;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 14px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-  margin-top: 10px;
-}
-
-button:hover {
-  background: #0077b3;
-}
-
-/* === Меню === */
 .menu {
   display: flex;
   justify-content: space-around;
-  background: #fff;
-  border-top: 1px solid #ddd;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  left: 0;
 }
-
-.menu button {
+button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
   flex: 1;
-  margin: 0 6px;
+  margin: 5px;
 }
-
-/* === Скрытие страниц === */
-.hidden {
-  display: none;
+.content-box {
+  margin: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(200,200,200,0.1);
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.counter span {
+  margin: 0 10px;
 }

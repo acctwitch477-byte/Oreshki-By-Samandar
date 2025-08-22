@@ -1,69 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oreshki by Samandar</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Oreshki by Samandar</h1>
-
-    <!-- Главные меню -->
-    <div id="mainMenu">
-      <button onclick="openPage('takeOrder')">Забрать заказ</button>
-      <button onclick="openPage('orders')">Заказы</button>
-      <button onclick="openPage('archive')">Архив</button>
-    </div>
-
-    <!-- Забрать заказ -->
-    <div id="takeOrder" class="hidden">
-      <h2>Выберите продукты</h2>
-
-      <div class="product-card">
-        <p>Oreshki</p>
-        <div class="counter">
-          <button onclick="changeCount('oreshki', -1)">-</button>
-          <span id="oreshkiCount">0</span>
-          <button onclick="changeCount('oreshki', 1)">+</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <p>Oreshki Шоколадный</p>
-        <div class="counter">
-          <button onclick="changeCount('choco', -1)">-</button>
-          <span id="chocoCount">0</span>
-          <button onclick="changeCount('choco', 1)">+</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <p>Oreshki Клубничный</p>
-        <div class="counter">
-          <button onclick="changeCount('straw', -1)">-</button>
-          <span id="strawCount">0</span>
-          <button onclick="changeCount('straw', 1)">+</button>
-        </div>
-      </div>
-
-      <button onclick="makeOrder()">Заказать</button>
-    </div>
-
-    <!-- Заказы -->
-    <div id="orders" class="hidden">
-      <h2>Мои заказы</h2>
-      <div id="ordersList"></div>
-    </div>
-
-    <!-- Архив -->
-    <div id="archive" class="hidden">
-      <h2>Архив заказов</h2>
-      <div id="archiveList"></div>
-    </div>
+  <div class="header">
+    <img src="logo.png" alt="Oreshki by Samandar" class="logo" />
+  </div>
+  <div class="menu">
+    <button onclick="openPage('order')">Забрать заказ</button>
+    <button onclick="openPage('orders')">Заказы</button>
+    <button onclick="openPage('archive')">Архив</button>
+    <button onclick="openPage('calculator')">Калькулятор</button>
   </div>
 
-  <script src="app.js"></script>
+  <div id="content"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
